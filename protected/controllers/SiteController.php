@@ -1,6 +1,6 @@
 <?php
 
-class SiteController extends AdminController
+class SiteController extends FrontController
 {
 	/**
 	 * Declares class-based actions.
@@ -96,6 +96,6 @@ class SiteController extends AdminController
 	public function actionIndex()
     {
         // display the login form
-        $this->render('pages/index' );
+        $this->render('//pages/index' );
     }
 }

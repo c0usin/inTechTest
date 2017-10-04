@@ -1,0 +1,257 @@
+/*-----------------------------------------     Responsive design   --------------------------------------------------*/
+@media screen and (max-width: 1440px)
+{
+}
+@media screen and (max-width: 1280px)
+{
+}
+@media screen and (max-width: 1210px)
+{
+    .content
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #prev
+    {
+        left: -18px;
+    }
+    #next
+    {
+        right: -18px;
+    }
+    .copyright,
+    .fallow-us
+    {
+        width: 20%;
+    }
+}
+@media screen and (max-width: 1100px)
+{
+}
+@media screen and (max-width: 1054px)
+{
+}
+@media screen and (max-width: 1024px)
+{
+    .phone
+    {
+        margin-bottom: 10px;
+    }
+    .phone,
+    .navigation
+    {
+        width: 100%;
+        text-align: right;
+    }
+    .other-categories-listing li
+    {
+        width: 45%;
+    }
+        .other-categories-listing a
+        {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    .copyright
+    {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .pages-listing
+    {
+        width: 50%;
+    }
+    .fallow-us,
+    .logo-mini
+    {
+        width: 25%;
+    }
+    .fallow-us
+    {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 940px)
+{
+    .banner-details h2
+    {
+        font-size: 30px;
+    }
+    .header-category
+    {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .item-image
+    {
+        width: 35%;
+    }
+    .item-id
+    {
+        width: 20%;
+    }
+    .pages-listing
+    {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .fallow-us,
+    .logo-mini
+    {
+        width: 50%;
+    }
+    .fallow-us
+    {
+        text-align: left;
+    }
+}
+@media screen and (max-width: 860px)
+{
+}
+@media screen and (max-width: 768px)
+{
+    .banner-details
+    {
+        margin-top: 20px;
+    }
+        .banner-details .banner-text,
+        .banner-category
+        {
+            width: 100%;
+        }
+        .banner-text
+        {
+            margin-bottom: 10px;
+        }
+            .banner-details h2
+            {
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+            .text
+            {
+                font-size: 15px;
+            }
+            .button
+            {
+                margin-top: 20px;
+            }
+                .button input
+                {
+                    padding: 10px 30px;
+                }
+        .categories-listing li
+        {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    .arrows a
+    {
+        top: 35%;
+    }
+}
+@media screen and (max-width: 720px)
+{
+}
+@media screen and (max-width: 680px)
+{
+    .categories-listing
+    {
+        max-height: 185px;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    #logo
+    {
+        margin-bottom: 10px;
+    }
+        #logo img
+        {
+            max-height: 70px;
+        }
+    #logo,
+    #mainmenu
+    {
+        width: 100%;
+    }
+    #logo,
+    .phone,
+    .navigation
+    {
+        text-align: center;
+    }
+    .header-home-page
+    {
+        overflow: hidden;
+    }
+    #footer > div > div > div,
+    #footer a,
+    #footer .separator
+    {
+        font-size: 14px;
+    }
+    .fallow-us li
+    {
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width: 530px)
+{
+}
+@media screen and (max-width: 480px)
+{
+    .header-category
+    {
+        padding-left: 2%;
+        font-size: 12px;
+    }
+    .categories-listing li > div
+    {
+        padding-left: 4%;
+    }
+}
+@media screen and (max-width: 430px)
+{
+    .item-name
+    {
+        width: 50%;
+    }
+    .item-id
+    {
+        width: 15%;
+    }
+    .arrows a
+    {
+        top: 29%;
+    }
+    .categories-listing
+    {
+        max-height: 155px;
+    }
+        .categories-listing ul
+        {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+}
+@media screen and (max-width: 380px)
+{
+}
+@media screen and (max-width: 350px)
+{
+    .categories-listing
+    {
+        max-height: 120px;
+    }
+        .categories-listing li
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+}

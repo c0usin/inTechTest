@@ -6,45 +6,106 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/jquery/jquery-ui.1.12.1.min.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
+    <div class="container" id="page">
+        <div id="header">
+        </div>
+        <!-- header -->
 
-<div class="container" id="page">
+        <?php
+        $this->widget('zii.widgets.CBreadcrumbs',
+            array( 'links'=>$this->breadcrumbs, )
+        );
+        ?>
+        <!-- breadcrumbs -->
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+        <?php echo $content; ?>
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('post/index')),
-				array('label'=>'About', 'url'=>array('site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('site/contact')),
-				array('label'=>'Login', 'url'=>array('site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
+        <div id="footer">
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="copyright">
+                        &copy; <?php echo date('Y'); ?> All Rights Reserved
+                    </div>
 
-	<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-		'links'=>$this->breadcrumbs,
-	)); ?><!-- breadcrumbs -->
+                    <div class="pages-listing">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="separator">
+                                |
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Terms and Conditions
+                                </a>
+                            </li>
+                            <li class="separator">
+                                |
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sitemap
+                                </a>
+                            </li>
+                            <li class="separator">
+                                |
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-    <div id="content">
-	    <?php echo $content; ?>
+                    <div class="fallow-us">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="logo-mini">
+                        Powered by InTech
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
     </div>
+    <!-- page -->
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
-
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery/jquery-ui.1.11.4.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery/jquery-cycle2.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery/jquery-cycle2-carousel.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/main.js"></script>
 </body>
 </html>

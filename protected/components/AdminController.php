@@ -36,12 +36,12 @@ class AdminController extends Controller
         $this->data = array(
             "menuItems" => array(
                 'items' => array(
-                    array( 'label' => 'Main Menu', 'url' => array( 'menu' ) ),
-                    array( 'label' => 'Pages', 'url' => array( 'pages', 'view' => 'about' ), 'visible' => ! Yii::app()->user->isGuest  ),
-                    array( 'label' => 'Navigations', 'url' => array( 'navigations' ), 'visible' => ! Yii::app()->user->isGuest  ),
-                    array( 'label' => 'Categories', 'url' => array( 'categories' ), 'visible' => ! Yii::app()->user->isGuest ),
-                    array( 'label' => 'Sliders', 'url' => array( 'sliders' ), 'visible' => ! Yii::app()->user->isGuest ),
-                    array( 'label' => 'Logout ('.Yii::app()->user->name.')', 'url' => array( 'users/logout'), 'visible' => ! Yii::app()->user->isGuest )
+                    array( 'label' => 'Main Menu', 'url' => array( 'admin/menu' ) ),
+                    array( 'label' => 'Pages', 'url' => array( 'admin/pages', 'view' => 'about' ), 'visible' => ! Yii::app()->user->isGuest  ),
+                    array( 'label' => 'Navigations', 'url' => array( 'admin/navigations' ), 'visible' => ! Yii::app()->user->isGuest  ),
+                    array( 'label' => 'Categories', 'url' => array( 'admin/categories' ), 'visible' => ! Yii::app()->user->isGuest ),
+                    array( 'label' => 'Sliders', 'url' => array( 'admin/sliders' ), 'visible' => ! Yii::app()->user->isGuest ),
+                    array( 'label' => 'Logout ('.Yii::app()->user->name.')', 'url' => array( 'admin/users/logout'), 'visible' => ! Yii::app()->user->isGuest )
                 ),
             ),
         );
