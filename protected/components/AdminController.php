@@ -40,12 +40,27 @@ class AdminController extends Controller
                     array( 'label' => 'Pages', 'url' => array( 'admin/pages', 'view' => 'about' ), 'visible' => ! Yii::app()->user->isGuest  ),
                     array( 'label' => 'Navigations', 'url' => array( 'admin/navigations' ), 'visible' => ! Yii::app()->user->isGuest  ),
                     array( 'label' => 'Categories', 'url' => array( 'admin/categories' ), 'visible' => ! Yii::app()->user->isGuest ),
-                    array( 'label' => 'Sliders', 'url' => array( 'admin/sliders' ), 'visible' => ! Yii::app()->user->isGuest ),
+                    array( 'label' => 'Slides', 'url' => array( 'admin/slides' ), 'visible' => ! Yii::app()->user->isGuest ),
                     array( 'label' => 'Logout ('.Yii::app()->user->name.')', 'url' => array( 'admin/users/logout'), 'visible' => ! Yii::app()->user->isGuest )
                 ),
             ),
         );
 
+        if( Yii::app()->user->hasFlash( "errorMessage" ) )
+        {
+            $this->data["errorMessage"] = Yii::app()->user->getFlash( "errorMessage" );
+        }
+
+        if( Yii::app()->user->hasFlash( "successMessage" ) )
+        {
+            $this->data["successMessage"] = Yii::app()->user->getFlash( "successMessage" );
+        }
+
         return TRUE;
+    }
+
+    protected function showResultForAjax( $result )
+    {
+        echo json_encode( $result );
     }
 }

@@ -31,7 +31,7 @@ class SiteController extends FrontController
 	    	if(Yii::app()->request->isAjaxRequest)
 	    		echo $error['message'];
 	    	else
-	        	$this->render('error', $error);
+	        	$this->render('//site/error', $error);
 	    }
 	}
 
@@ -95,7 +95,37 @@ class SiteController extends FrontController
 
 	public function actionIndex()
     {
+        $this->loadPageDetails();
+        $this->loadSlides();
+
         // display the login form
-        $this->render('//pages/index' );
+        $this->render('//pages/index', $this->data );
+    }
+
+    private function loadPageDetails( $code = "" )
+    {
+        if( empty( $code ) )
+        {
+            $code = "home";
+        }
+
+        $pageDetails = PageModel::model()->findByAttributes(
+            array(
+                "code" => $code,
+                "is_enabled" => 1
+            )
+        );
+
+        if( empty( $pageDetails ) )
+        {
+            $pageDetails = new PageModel();
+        }
+
+        $this->data["pageDetails"] = $pageDetails;
+    }
+
+    private function loadSlides()
+    {
+        $this->data["slides"] = SlideModel::model()->getListForHome( 15 );
     }
 }

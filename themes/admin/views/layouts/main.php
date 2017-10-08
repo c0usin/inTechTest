@@ -13,6 +13,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/main.css" />
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
@@ -23,10 +24,14 @@
             </div><!-- header -->
 
             <div id="mainmenu">
-                <?php $this->renderPartial( "//partials/menu_listing", $this->data ); ?>
+                <?php $this->renderPartial( "//partials/menuListing", $this->data ); ?>
             </div><!-- mainmenu -->
 
-            <?php $this->renderPartial( "//partials/breadcrumbs" ) ?><!-- breadcrumbs -->
+            <?php
+            $this->renderPartial( "//partials/error_notices", $this->data );
+            $this->renderPartial( "//partials/success_notices", $this->data );
+            $this->renderPartial( "//partials/breadcrumbs", $this->data );
+            ?>
 
             <div id="content">
                 <?php echo $content; ?>
@@ -38,5 +43,11 @@
                 <?php echo Yii::powered(); ?>
             </div><!-- footer -->
         </div><!-- page -->
+
+
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/ckeditor/ckeditor.js" ></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery/jquery-3.2.1.min.js" ></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery/jquery-ui.1.11.4.min.js" ></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/main.js" ></script>
     </body>
 </html>

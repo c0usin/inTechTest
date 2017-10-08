@@ -34,8 +34,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=sakersoft_intech_test',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'Pont4z1',
+			'username' => '',
+			'password' => '',
 			'charset' => 'utf8',
 			'tablePrefix' => 'itt_',
 		),
@@ -46,6 +46,7 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+                //'gii/<controller:\w+>/<action:[\w-]+>' => 'gii/<controller>/<action>',
 				'post/<id:\d+>/<title:.*?>'=>'post/view',
 				'posts/<tag:.*?>'=>'post/index',
                 'admin/<controller:\w+>/<action:\w+>'=>'Admin<controller>/<action>',
@@ -70,6 +71,13 @@ return array(
 			),
 		),
 	),
+    'modules'=>array(
+        'gii'=>array(
+            'class' => 'gii.GiiModule',
+            'password' => 'test',
+            'ipFilters' => array( "127.0.0.1", "::1" ),
+        ),
+    ),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']

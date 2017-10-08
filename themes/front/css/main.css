@@ -394,11 +394,17 @@ i
 	.cycle-slide
 	{
 		margin-left: 2%;
+		text-align: center;
 	}
 	.cycle-slide:first-child
 	{
 		margin-left: 0;
 	}
+		.cycle-slide img
+		{
+			max-width: 350px;
+			max-height: 160px;
+		}
 /*	content
 ----------------------------------------------------------------------------------------------------------------------*/
 div.breadcrumbs

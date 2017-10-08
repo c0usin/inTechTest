@@ -1,0 +1,90 @@
+.items th.is_enabled,
+.items th.actions,
+.items td.actions
+{
+    text-align: center;
+}
+.items .thumbnail,
+.items .thumbnail img
+{
+    max-width: 60px;
+}
+.item-edit
+{
+    font-size: 0;
+}
+.item-edit > div
+{
+    margin: 5px 0px;
+}
+    .item-edit .label,
+    .item-edit .input
+    {
+        vertical-align: top;
+        display: inline-block;
+        font-size: 14px;
+    }
+    .item-edit .label
+    {
+        width: 10%;
+    }
+    .item-edit .input
+    {
+        width: 90%;
+    }
+.item_enabled
+{
+    text-align: center;
+}
+    .item_enabled a
+    {
+        margin: 0;
+        color: #333 !important;
+        display: inline-block;
+    }
+    .item_enabled .back-green,
+    .item_enabled .back-red
+    {
+        background-color: transparent;
+    }
+    .item_enabled .back-green
+    {
+        background-color: #90C657;
+    }
+    .item_enabled .back-red
+    {
+        background-color: rgba( 199, 80, 80, 0.6 );
+    }
+        .item_enabled .back-green i,
+        .item_enabled .back-red i
+        {
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .item_enabled i.disabled:before
+        {
+            content: "✗";
+            color: #fff;
+            font-style: normal;
+        }
+        .item_enabled i.enabled:before
+        {
+            content: "✓";
+            color: #fff;
+            font-style: normal;
+            font-size: 16px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+        }
+.already_uploaded_image img
+{
+    max-width: 450px;
+    max-height: 200px;
+}

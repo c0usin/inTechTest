@@ -3,7 +3,7 @@
         <div class="content">
             <div class="header">
                 <div id="logo">
-                    <img src="\intechtest\themes\front\images\static\logo.png" alt="logo.png">
+                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/static/logo.png" alt="logo.png">
                 </div>
 
                 <div id="mainmenu">
@@ -33,13 +33,11 @@
                 <div class="banner-text">
                     <div>
                         <h2>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            <?php echo $pageDetails->name; ?>
                         </h2>
 
                         <div class="text">
-                            Etiam ac sodales orci, id tristique magna.
-                            <br/>
-                            Etiam sit amet lacus eu diam faucibus mattis. Nam convallis lobortis sapien, et consequat volutpat in.
+                            <?php echo $pageDetails->description; ?>
                         </div>
 
                         <div class="button">
@@ -139,7 +137,7 @@
                                 <div>
                                     <div class="item-image">
                                         <label for="radio_phone">
-                                            <img src="\intechtest\themes\front\images\static\category_phone.jpg" alt="category_phone.jpg">
+                                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/static/category_phone.jpg" alt="category_phone.jpg">
                                         </label>
                                     </div>
 
@@ -162,7 +160,7 @@
                                 <div>
                                     <div class="item-image">
                                         <label for="radio_mp3">
-                                            <img src="\intechtest\themes\front\images\static\category_mp3.jpg" alt="category_mp3.jpg">
+                                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/static/category_mp3.jpg" alt="category_mp3.jpg">
                                         </label>
                                     </div>
 
@@ -185,7 +183,7 @@
                                 <div>
                                     <div class="item-image">
                                         <label for="radio_tablet">
-                                            <img src="\intechtest\themes\front\images\static\category_gps.jpg" alt="category_gps.jpg">
+                                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/static/category_gps.jpg" alt="category_gps.jpg">
                                         </label>
                                     </div>
 
@@ -208,7 +206,7 @@
                                 <div>
                                     <div class="item-image">
                                         <label for="radio_gps">
-                                            <img src="\intechtest\themes\front\images\static\category_phone.jpg" alt="category_phone.jpg">
+                                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/static/category_phone.jpg" alt="category_phone.jpg">
                                         </label>
                                     </div>
 
@@ -231,7 +229,7 @@
                                 <div>
                                     <div class="item-image">
                                         <label for="radio_laptop">
-                                            <img src="\intechtest\themes\front\images\static\category_mp3.jpg" alt="category_mp3.jpg">
+                                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/static/category_mp3.jpg" alt="category_mp3.jpg">
                                         </label>
                                     </div>
 
@@ -254,7 +252,7 @@
                                 <div>
                                     <div class="item-image">
                                         <label for="radio_camera">
-                                            <img src="\intechtest\themes\front\images\static\category_gps.jpg" alt="category_gps.jpg">
+                                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/static/category_gps.jpg" alt="category_gps.jpg">
                                         </label>
                                     </div>
 
@@ -281,63 +279,7 @@
     </div>
 </div>
 
-<div class="content-wrapper">
-    <div class="content">
-        <div class="images-listing">
-            <div class="cycle-slideshow carousel" data-cycle-fx="carousel" data-cycle-timeout="0" data-cycle-slides="> div"
-                 data-allow-wrap="false" data-cycle-carousel-fluid="true" data-cycle-next="#next" data-cycle-prev="#prev" data-cycle-carousel-visible="3">
-                <div>
-                    <div>
-                        <a href="#">
-                            <img src="\intechtest\themes\front\images\static\slider1.jpg" alt="slider1.jpg">
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <a href="#">
-                            <img src="\intechtest\themes\front\images\static\slider2.jpg" alt="slider2.jpg">
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <a href="#">
-                            <img src="\intechtest\themes\front\images\static\slider1.jpg" alt="slider1.jpg">
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <a href="#">
-                            <img src="\intechtest\themes\front\images\static\slider2.jpg" alt="slider2.jpg">
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <a href="#">
-                            <img src="\intechtest\themes\front\images\static\slider1.jpg" alt="slider1.jpg">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="arrows">
-                <a href="#" id="prev">
-                    <i class="icon-left-arrow"></i>
-                </a>
-                <a href="#" id="next">
-                    <i class="icon-right-arrow"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+<?php echo $this->renderPartial( "//pages/slidesListing", $this->data ); ?>
 
 <!--
 <img src="\intechtest\themes\front\images\static\home.jpg" alt="mockup_dropopen.jpg">

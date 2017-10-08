@@ -20,4 +20,36 @@ class FrontController extends Controller
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs = array();
+
+    protected $data     = array();
+
+    protected function beforeAction( $action )
+    {
+        Yii::app()->theme = "front";
+
+        /*$this->data = array(
+            "menuItems" => array(
+                'items' => array(
+                    array( 'label' => 'Main Menu', 'url' => array( 'admin/menu' ) ),
+                    array( 'label' => 'Pages', 'url' => array( 'admin/pages', 'view' => 'about' ), 'visible' => ! Yii::app()->user->isGuest  ),
+                    array( 'label' => 'Navigations', 'url' => array( 'admin/navigations' ), 'visible' => ! Yii::app()->user->isGuest  ),
+                    array( 'label' => 'Categories', 'url' => array( 'admin/categories' ), 'visible' => ! Yii::app()->user->isGuest ),
+                    array( 'label' => 'Sliders', 'url' => array( 'admin/sliders' ), 'visible' => ! Yii::app()->user->isGuest ),
+                    array( 'label' => 'Logout ('.Yii::app()->user->name.')', 'url' => array( 'admin/users/logout'), 'visible' => ! Yii::app()->user->isGuest )
+                ),
+            ),
+        );*/
+
+        if( Yii::app()->user->hasFlash( "errorMessage" ) )
+        {
+            $this->data["errorMessage"] = Yii::app()->user->getFlash( "errorMessage" );
+        }
+
+        if( Yii::app()->user->hasFlash( "successMessage" ) )
+        {
+            $this->data["successMessage"] = Yii::app()->user->getFlash( "successMessage" );
+        }
+
+        return TRUE;
+    }
 }
