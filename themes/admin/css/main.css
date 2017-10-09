@@ -88,3 +88,20 @@
     max-width: 450px;
     max-height: 200px;
 }
+.notification
+{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+}
+    .notification .error
+    {
+        color: red;
+        border: 1px solid red;
+    }
+    .notification .success
+    {
+        color: darkgreen;
+        border: 1px solid darkgreen;
+    }

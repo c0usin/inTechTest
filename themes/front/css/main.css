@@ -70,7 +70,8 @@ i
 /*	colors
 ----------------------------------------------------------------------------------------------------------------------*/
 .banner-details,
-.button input
+.button input,
+.header-category input
 {
 	color: #fff;
 }
@@ -78,9 +79,14 @@ i
 {
 	color: #000;
 }
+.phone a
+{
+	color: #C4D025;
+}
 /*	background colors
 ----------------------------------------------------------------------------------------------------------------------*/
-.navigation li,
+.navigation li:hover,
+.navigation li.active,
 .button div
 {
 	background-color: #C4D025;
@@ -116,7 +122,6 @@ i
 }
 	.phone
 	{
-		color: #C4D025;
 		font-size: 16px;
 		font-weight: bolder;
 		width: 25%;
@@ -128,6 +133,14 @@ i
 			width: 30px;
 			height: 30px;
 		}
+		.phone span
+		{
+			vertical-align: middle;
+		}
+	.navigation .icon-menu
+	{
+		display: none;
+	}
 	.navigation ul
 	{
 		padding-left: 2%;
@@ -207,7 +220,7 @@ i
 				padding-right: 5%;
 			}
 				.banner-details h2,
-				.header-category
+				.header-category input
 				{
 					text-transform: uppercase;
 				}
@@ -247,11 +260,15 @@ i
 			}
 			.header-category
 			{
-				font-size: 15px;
-				padding-top: 11px;
+				padding-top: 10px;
 				padding-bottom: 10px;
 				position: relative;
 			}
+				.header-category input
+				{
+					font-size: 15px;
+					width: 100%;
+				}
 				.icon-arrow-down
 				{
 					background-image: url( "../images/static/icons/dropdown.png" );
@@ -485,7 +502,8 @@ div.flash-error, div.flash-notice, div.flash-success
 	margin-bottom:1em;
 	border:2px solid #ddd;
 }
-div.flash-error
+div.flash-error,
+.error
 {
 	background:#FBE3E4;
 	color:#8a1f11;
@@ -514,4 +532,8 @@ div.flash-notice a
 div.flash-success a
 {
 	color:#264409;
+}
+.error div
+{
+	padding: 15px;
 }

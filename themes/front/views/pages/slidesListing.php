@@ -17,9 +17,10 @@ if( empty( $slides ) )
             ?>
                 <div>
                     <div>
-                        <a href="#">
+                        <a href="<?php echo Yii::app()->baseUrl."/upload/slides/".$slide->id."/".$slide->file_name; ?>"
+                            data-lightbox="roadtrip">
                             <img src="<?php echo Yii::app()->baseUrl."/upload/slides/".$slide->id."/".$slide->file_name; ?>"
-                                 alt="<?php echo $slide->file_name; ?>">
+                                alt="<?php echo $slide->file_name; ?>">
                         </a>
                     </div>
                 </div>

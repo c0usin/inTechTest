@@ -79,7 +79,7 @@
     {
         font-size: 30px;
     }
-    .header-category
+    .header-category input
     {
         text-overflow: ellipsis;
         overflow: hidden;
@@ -181,15 +181,35 @@
         width: 100%;
     }
     #logo,
-    .phone,
-    .navigation
+    .phone
     {
         text-align: center;
     }
-    .header-home-page
+    .navigation .icon-menu
     {
-        overflow: hidden;
+        display: block;
+        background-image: url( "../images/static/icons/menu-4-24.png" );
+        width: 100%;
+        background-position: left center;
+        cursor: pointer;
     }
+    .navigation ul
+    {
+        display: none;
+        padding-left: 0;
+        background-color: #9DA72D;
+        margin-top: 5px;
+        text-align: left;
+    }
+        .navigation .display-block,
+        #mainmenu li
+        {
+            display: block;
+        }
+        #mainmenu li
+        {
+            margin-left: 0;
+        }
     #footer > div > div > div,
     #footer a,
     #footer .separator
@@ -232,7 +252,7 @@
     }
     .categories-listing
     {
-        max-height: 155px;
+        max-height: 175px;
     }
         .categories-listing ul
         {
@@ -242,12 +262,16 @@
 }
 @media screen and (max-width: 380px)
 {
+    .categories-listing
+    {
+        max-height: 155px;
+    }
 }
 @media screen and (max-width: 350px)
 {
     .categories-listing
     {
-        max-height: 120px;
+        max-height: 130px;
     }
         .categories-listing li
         {

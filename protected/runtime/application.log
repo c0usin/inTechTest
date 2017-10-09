@@ -2017,3 +2017,30 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/intechtest_github/
 ---
+2017/10/09 08:18:04 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'sakersoft_intech_test' in D:\xampp\htdocs\intechtest_github\framework\db\CDbConnection.php:399
+Stack trace:
+#0 D:\xampp\htdocs\intechtest_github\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 D:\xampp\htdocs\intechtest_github\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\intechtest_github\framework\base\CModule.php(394): CDbConnection->init()
+#3 D:\xampp\htdocs\intechtest_github\framework\base\CApplication.php(459): CModule->getComponent('db')
+#4 D:\xampp\htdocs\intechtest_github\framework\db\ar\CActiveRecord.php(639): CApplication->getDb()
+#5 D:\xampp\htdocs\intechtest_github\framework\db\ar\CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#6 D:\xampp\htdocs\intechtest_github\framework\db\ar\CActiveRecord.php(1463): CActiveRecord->getCommandBuilder()
+#7 D:\xampp\htdocs\intechtest_github\protected\components\UserIdentity.php(18): CActiveRecord->find('LOWER(username)...', Array)
+#8 D:\xampp\htdocs\intechtest_github\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#9 D:\xampp\htdocs\intechtest_github\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#10 D:\xampp\htdocs\intechtest_github\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#11 D:\xampp\htdocs\intechtest_github\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#12 D:\xampp\htdocs\intechtest_github\protected\controllers\AdminusersController.php(78): CModel->validate()
+#13 D:\xampp\htdocs\intechtest_github\framework\web\actions\CInlineAction.php(49): AdminusersController->actionLogin()
+#14 D:\xampp\htdocs\intechtest_github\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 D:\xampp\htdocs\intechtest_github\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 D:\xampp\htdocs\intechtest_github\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\xampp\htdocs\intechtest_github\framework\web\CWebApplication.php(282): CController->run('login')
+#18 D:\xampp\htdocs\intechtest_github\framework\web\CWebApplication.php(141): CWebApplication->runController('Adminusers/logi...')
+#19 D:\xampp\htdocs\intechtest_github\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 D:\xampp\htdocs\intechtest_github\index.php(11): CApplication->run()
+#21 {main}
+REQUEST_URI=/intechtest_github/admin/users/login
+HTTP_REFERER=http://localhost/intechtest_github/admin/users/login
+---
